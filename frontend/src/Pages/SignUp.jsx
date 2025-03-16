@@ -18,6 +18,7 @@ function Signup() {
     country: '',
     city: '',
     password: '',
+    confirmPassword: '',
     gender: '',
     type: 'Seeker'
 
@@ -27,8 +28,13 @@ function Signup() {
   const registerUser = async (e) => {
     e.preventDefault()
    
-    const {firstName, lastName, email, phone, country, city, password, gender, type} = data
+    const {firstName, lastName, email, phone, country, city, password,  confirmPassword, gender, type} = data
     
+    if (password !== confirmPassword) {
+      toast.error("Passwords do not match");
+      return;
+    }
+
     try {
       const {data} = await axios.post('/signup', {
         firstName, lastName, email, phone, country, city, password, gender, type
@@ -71,7 +77,11 @@ function Signup() {
 
         <div className="row">
           <input type="password" name="password" placeholder="Password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
+          <input type="password" name="confirmPassword" placeholder="Confirm Password" value={data.confirmPassword} onChange={(e) => setData({ ...data, confirmPassword: e.target.value })} />
         </div>
+
+        
+
 
         <div className="gender-group">
           <label>

@@ -29,7 +29,12 @@ const NavBar = () => {
         <div className="logo">
           <img src={logo} alt="Feel Share Logo" />
         </div>
-        <button className="menu-button">☰</button>
+      
+      <div class="menu-container">
+        <button class="menu-button" onClick="toggleMenu()">☰</button>
+        
+      </div>
+
       </nav>
     </div>
   );

@@ -1,0 +1,89 @@
+.dashboard-container {
+    padding: 10px;
+    max-width: 1500px;
+    margin-top: 0px;
+    margin: 0 auto;
+  }
+  
+  
+  .dashboard-title {
+    font-size: 50px;
+    color: #191BA2;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-left: 0;
+  }
+  
+  
+  .dashboard-subtitle {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+ 
+  .dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap:50px;
+    row-gap: 100px;
+    column-gap: 200px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+  }
+  
+
+  .dashboard-card {
+    flex: 1 1 calc(33.33% - 2rem); 
+    max-width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #191BA2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  
+  .dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+    
+ 
+  .card-title {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  .card-subtitle {
+    font-size: 0.9rem;
+    color: white;
+  }
+
+.card-button {
+    padding: 10px 15px;
+    background-color: white;
+    color: #191BA2;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; 
+  }
+  
+ 
+  .card-button:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+ 
+  .card-button:active {
+    background-color: #004080; 
+    color: white;
+  }
