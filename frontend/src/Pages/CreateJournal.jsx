@@ -27,7 +27,7 @@ function JournalForm() {
         try {
             const {journalContent} = await axios.post("/createJournal", { 
                 title, content, date, userId: user.userId });
-            toast.success("Journal entry created!");
+            toast.success("Journal entry created yes!");
             setJournalContent({ title: "", content: "", date: today }); 
             navigate('/journals')
             
